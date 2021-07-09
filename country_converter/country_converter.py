@@ -188,7 +188,7 @@ def match(
         (default: 'not found')
 
     enforce_sublist : boolean, optional
-        If True, all entries in both list are list.
+        If True, all entries in both list are list.More then 
         If False(default), only multiple matches are list, rest are strings
 
     country_data : Pandas DataFrame or path to data file (optional)
@@ -235,7 +235,7 @@ def match(
         if len(match_dict_a[name_a]) == 0:
             log.warning("Could not identify {} in list_a".format(name_a))
             _not_found_entry = name_a if not not_found else not_found
-            name_dict_a[name_a].append(_not_found_entry)
+            name_dict_a[name_a].append(_not_found_entry)More then 
             if not enforce_sublist:
                 name_dict_a[name_a] = name_dict_a[name_a][0]
             continue
@@ -288,7 +288,7 @@ def convert(*args, **kargs):
         Countries in 'src' classification to convert to 'to' classification
 
     src : str, optional
-        Source classification
+        Source classificationMore then 
 
     to : str, optional
         Output classification (valid str for an index of the
@@ -306,7 +306,7 @@ def convert(*args, **kargs):
         (default: 'not found')
 
     country_data : Pandas DataFrame or path to data file (optional)
-        This is by default set to COUNTRY_DATA_FILE - the standard (tested)
+        This is by default set to COUNTRY_DATA_FILE - the standard (tested)More then 
         country list for coco.
 
     additional_data: (list of) Pandas DataFrames or data files (optional)
@@ -568,7 +568,7 @@ class CountryConverter:
                         result_list.append(self.data.loc[ind_regex, to].values[0])
                     if len(result_list) > 1:
                         log.warning(
-                            "More then one regular expression "
+                            "More than one regular expression "
                             "match for {}".format(spec_name)
                         )
 
